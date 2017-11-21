@@ -1,4 +1,6 @@
-const initialState = [5];
+import Node from '../node';
+
+const initialState = new Node(5);
 
 export default function values(state = initialState, action) {
   switch (action.type) {

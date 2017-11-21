@@ -1,3 +1,4 @@
 export default function values(state) {
-  return state.values;
+  const tree = state.values;
+  return tree.value;
 }
