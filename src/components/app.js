@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function App() {
+export default function App({ values }) {
   return (
     <div>
-      <span>hello world</span>
+      <span>{values}</span>
     </div>
   )
 }
