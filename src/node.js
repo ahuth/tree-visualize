@@ -27,7 +27,7 @@ Node.prototype[Symbol.iterator] = function* () {
   if (this.left) {
     yield* this.left[Symbol.iterator]();
   }
-  yield this.value;
+  yield this;
   if (this.right) {
     yield* this.right[Symbol.iterator]();
   }
