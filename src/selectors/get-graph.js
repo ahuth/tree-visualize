@@ -14,7 +14,7 @@ function getNodes(tree) {
       id: node.value,
       label: String(node.value),
       size: 20,
-      x: 50,
+      x: getX(node),
       y: getY(node),
     });
   }
@@ -37,6 +37,22 @@ function getEdges(tree) {
   }
 
   return edges;
+}
+
+function getX(node) {
+  let current = node;
+  let x = 50;
+
+  while (current.parent) {
+    if (current === current.parent.right) {
+      x += 10;
+    } else {
+      x -= 10;
+    }
+    current = current.parent;
+  }
+
+  return x;
 }
 
 function getY(node) {
