@@ -1,5 +1,5 @@
 import React from 'react';
-import { EdgeShapes, Sigma, RandomizeNodePositions, RelativeSize } from 'react-sigma'
+import { EdgeShapes, Sigma } from 'react-sigma'
 
 const styles = {
   sigma: {
@@ -16,9 +16,6 @@ export default function App({ graph }) {
   return (
     <Sigma renderer="webgl" graph={graph} settings={settings} style={styles.sigma}>
       <EdgeShapes default="line"/>
-      <RandomizeNodePositions>
-        <RelativeSize initialSize={15}/>
-      </RandomizeNodePositions>
     </Sigma>
   )
 }

@@ -13,6 +13,9 @@ function getNodes(tree) {
     nodes.push({
       id: node.value,
       label: String(node.value),
+      size: 20,
+      x: 50,
+      y: getY(node),
     });
   }
 
@@ -34,4 +37,16 @@ function getEdges(tree) {
   }
 
   return edges;
+}
+
+function getY(node) {
+  let current = node;
+  let ancestorCount = 0;
+
+  while (current.parent) {
+    ancestorCount += 1;
+    current = current.parent;
+  }
+
+  return ancestorCount * 10;
 }
