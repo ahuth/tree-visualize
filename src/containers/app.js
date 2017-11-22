@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import App from '../components/app';
-import { getValues } from '../selectors';
+import { getGraph } from '../selectors';
 
 function mapStateToProps(state) {
   return {
-    values: getValues(state),
+    graph: getGraph(state),
   };
 }
 

@@ -12,7 +12,7 @@ function getNodes(tree) {
   for (let node of tree) {
     nodes.push({
       id: node.value,
-      label: node.value,
+      label: String(node.value),
     });
   }
 

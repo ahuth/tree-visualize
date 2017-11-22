@@ -1,28 +1,24 @@
 import React from 'react';
+import { EdgeShapes, Sigma, RandomizeNodePositions, RelativeSize } from 'react-sigma'
 
-export default function App({ values }) {
+const styles = {
+  sigma: {
+    height: '100vh',
+  },
+};
+
+const settings = {
+  drawEdges: true,
+  labelThreshold: 0,
+};
+
+export default function App({ graph }) {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Value</th>
-          <th>Parent</th>
-          <th>Left</th>
-          <th>Right</th>
-          <th>Root</th>
-        </tr>
-      </thead>
-      <tbody>
-        {values.map(node => (
-          <tr key={node.value}>
-            <td>{node.value}</td>
-            <td>{node.parent}</td>
-            <td>{node.left}</td>
-            <td>{node.right}</td>
-            <td>{node.parent ? undefined : 'Yes'}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <Sigma renderer="webgl" graph={graph} settings={settings} style={styles.sigma}>
+      <EdgeShapes default="line"/>
+      <RandomizeNodePositions>
+        <RelativeSize initialSize={15}/>
+      </RandomizeNodePositions>
+    </Sigma>
   )
 }
