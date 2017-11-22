@@ -13,13 +13,13 @@ Node.prototype.insert = function (value) {
     if (this.left) {
       return this.left.insert(value);
     }
-    this.left = new Node(value);
+    this.left = new Node(value, this);
     return this.left;
   }
   if (this.right) {
     return this.right.insert(value);
   }
-  this.right = new Node(value);
+  this.right = new Node(value, this);
   return this.right;
 };
 
