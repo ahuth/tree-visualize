@@ -1,5 +1,4 @@
 import React from 'react';
-import map from 'lodash.map';
 
 export default function App({ values }) {
   return (
@@ -14,7 +13,7 @@ export default function App({ values }) {
         </tr>
       </thead>
       <tbody>
-        {map(values, node => (
+        {values.map(node => (
           <tr key={node.value}>
             <td>{node.value}</td>
             <td>{node.parent}</td>
