@@ -10,6 +10,7 @@ const styles = {
 const settings = {
   drawEdges: true,
   labelThreshold: 0,
+  sideMargin: 10,
 };
 
 export default function App({ graph }) {
