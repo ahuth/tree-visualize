@@ -19,5 +19,6 @@ const styles = {
   },
   controls: {
     position: 'absolute',
+    zIndex: 1,
   },
 };
