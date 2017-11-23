@@ -11,7 +11,7 @@ function getNodes(tree) {
 
   for (let node of tree) {
     nodes.push({
-      id: node.value,
+      id: Number(node.value),
       label: String(node.value),
       size: 20,
     });
