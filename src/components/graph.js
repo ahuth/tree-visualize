@@ -1,5 +1,5 @@
 import React from 'react';
-import { EdgeShapes, RelativeSize, RandomizeNodePositions, Sigma } from 'react-sigma';
+import { EdgeShapes, Sigma } from 'react-sigma';
 import Dagre from 'react-sigma/lib/Dagre';
 
 const styles = {
