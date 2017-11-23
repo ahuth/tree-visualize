@@ -4,9 +4,20 @@ import Graph from '../containers/graph';
 
 export default function App() {
   return (
-    <div>
-      <Controls />
+    <div style={styles.container}>
+      <div style={styles.controls}>
+        <Controls />
+      </div>
       <Graph />
     </div>
   );
 }
+
+const styles = {
+  container: {
+    position: 'relative',
+  },
+  controls: {
+    position: 'absolute',
+  },
+};
