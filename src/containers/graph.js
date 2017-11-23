@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import App from '../components/app';
+import Graph from '../components/graph';
 import { getGraph } from '../selectors';
 
 function mapStateToProps(state) {
@@ -8,4 +8,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(Graph);
