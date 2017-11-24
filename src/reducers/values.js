@@ -10,7 +10,7 @@ const initialState = new Tree(5)
 export default function values(state = initialState, action) {
   switch (action.type) {
     case 'ADD_NODE':
-      return state.insert(action.payload.value);;
+      return state.insert(action.payload.value);
     default:
       return state;
   }
