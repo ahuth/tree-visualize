@@ -1,17 +1,16 @@
 import Tree from '../tree';
 
-const initialState = new Tree(5);
-initialState.insert(6);
-initialState.insert(4);
-initialState.insert(3);
-initialState.insert(2);
-initialState.insert(1);
+let initialState = new Tree(5);
+initialState = initialState.insert(6);
+initialState = initialState.insert(4);
+initialState = initialState.insert(3);
+initialState = initialState.insert(2);
+initialState = initialState.insert(1);
 
 export default function values(state = initialState, action) {
   switch (action.type) {
     case 'ADD_NODE':
-      state.insert(action.payload.value);
-      return state;
+      return state.insert(action.payload.value);;
     default:
       return state;
   }

@@ -1,26 +1,26 @@
-export default function Tree(value, parent = null) {
+export default function Tree(value, parent = null, left = null, right = null) {
   this.value = value;
   this.parent = parent;
-  this.left = null;
-  this.right = null;
+  this.left = left;
+  this.right = right;
 }
 
 Tree.prototype.insert = function (value) {
   if (this.value === value) {
     return this;
   }
+
+  let left, right;
+
   if (value < this.value) {
-    if (this.left) {
-      return this.left.insert(value);
-    }
-    this.left = new Tree(value, this);
-    return this.left;
+    left = this.left ? this.left.insert(value) : new Tree(value, this);
+    right = this.right;
+  } else {
+    left = this.left;
+    right = this.right ? this.right.insert(value): new Tree(value, this);
   }
-  if (this.right) {
-    return this.right.insert(value);
-  }
-  this.right = new Tree(value, this);
-  return this.right;
+
+  return new Tree(this.value, this.parent, left, right);
 };
 
 Tree.prototype[Symbol.iterator] = function* () {
