@@ -1,11 +1,11 @@
 import Tree from '../tree';
 
-let initialState = new Tree(5);
-initialState = initialState.insert(6);
-initialState = initialState.insert(4);
-initialState = initialState.insert(3);
-initialState = initialState.insert(2);
-initialState = initialState.insert(1);
+const initialState = new Tree(5)
+  .insert(6)
+  .insert(4)
+  .insert(3)
+  .insert(2)
+  .insert(1);
 
 export default function values(state = initialState, action) {
   switch (action.type) {
