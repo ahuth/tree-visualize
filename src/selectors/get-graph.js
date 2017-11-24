@@ -28,8 +28,8 @@ function getEdges(tree) {
     if (parent) {
       edges.push({
         id: `${parent.value}_to_${node.value}`,
-        source: parent.value,
-        target: node.value,
+        source: Number(parent.value),
+        target: Number(node.value),
       });
     }
   }
