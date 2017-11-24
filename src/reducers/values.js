@@ -1,6 +1,6 @@
-import Node from '../node';
+import Tree from '../tree';
 
-const initialState = new Node(5);
+const initialState = new Tree(5);
 initialState.insert(6);
 initialState.insert(4);
 initialState.insert(3);
