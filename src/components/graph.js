@@ -29,6 +29,8 @@ export default class Graph extends React.Component {
     });
 
     Sigma.layouts.dagre.start(this.sigma);
+
+    this.sigma.bind('clickNode', this.props.onNodeClick);
   }
 
   componentWillUnmount() {
