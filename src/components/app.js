@@ -8,17 +8,17 @@ const styles = {
   },
   controls: {
     position: 'absolute',
-    zIndex: 1,
+    top: 0,
   },
 };
 
 export default function App() {
   return (
     <div style={styles.container}>
+      <Graph />
       <div style={styles.controls}>
         <Controls />
       </div>
-      <Graph />
     </div>
   );
 }
