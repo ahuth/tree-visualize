@@ -9,18 +9,16 @@ const styles = {
   },
 };
 
-const settings = {
-  drawEdges: true,
-  labelThreshold: 0,
-  sideMargin: 10,
-};
-
 export default class Graph extends React.Component {
   componentDidMount() {
     this.sigma = new Sigma({
       container: this.el,
       graph: this.props.graph,
-      settings,
+      settings: {
+        drawEdges: true,
+        labelThreshold: 0,
+        sideMargin: 10,
+      },
     });
 
     this.dagreListener = Sigma.layouts.dagre.configure(this.sigma, {
