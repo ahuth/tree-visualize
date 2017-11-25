@@ -34,6 +34,7 @@ export default class Graph extends React.Component {
   }
 
   componentWillUnmount() {
+    this.dagreListener.unbind();
     this.sigma.kill();
   }
 
