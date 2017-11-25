@@ -28,6 +28,7 @@ export default class Graph extends React.Component {
 
     Sigma.layouts.dagre.start(this.sigma);
 
+    this.sigma.bind('click', this.props.onBodyClick);
     this.sigma.bind('clickNode', this.props.onNodeClick);
   }
 
