@@ -1,6 +1,6 @@
 export default function addNode(value) {
   return {
-    type: 'ADD_NODE',
+    type: 'VALUE_SUBMITTED',
     payload: {
       value: Number(value),
     },

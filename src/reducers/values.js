@@ -9,7 +9,7 @@ const initialState = new Tree(5)
 
 export default function values(state = initialState, action) {
   switch (action.type) {
-    case 'ADD_NODE':
+    case 'VALUE_SUBMITTED':
       return state.insert(action.payload.value);
     default:
       return state;

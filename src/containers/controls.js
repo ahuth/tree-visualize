@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import Controls from '../components/controls';
-import { addNode } from '../actions';
+import { valueSubmitted } from '../actions';
 
 function mapDispatchToProps(dispatch) {
   return {
-    onButtonClick: (value) => dispatch(addNode(value)),
+    onButtonClick: (value) => dispatch(valueSubmitted(value)),
   };
 }
 
