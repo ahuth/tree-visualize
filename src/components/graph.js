@@ -15,10 +15,10 @@ const settings = {
   sideMargin: 10,
 };
 
-export default function Graph({ graph }) {
+export default function Graph({ graph, onNodeClick }) {
   return (
     <Updater graph={graph}>
-      <Sigma renderer="canvas" graph={graph} settings={settings} style={styles.sigma}>
+      <Sigma renderer="canvas" graph={graph} onClickNode={onNodeClick} settings={settings} style={styles.sigma}>
         <EdgeShapes default="line"/>
         <Dagre />
       </Sigma>
