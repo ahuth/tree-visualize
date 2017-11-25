@@ -19,31 +19,10 @@ export default function getGraph(state) {
         target: Number(node.value),
       });
     }
-
-    // Add a fake node if necessary to the right so that the tree has the proper binary tree shape.
-    if (node.left && !node.right) {
-      const fakeId = node.value + 0.5;
-      nodes.push({ id: fakeId, color: 'white', size: 0 });
-      edges.push({
-        id: `${node.value}_fake_edge_right`,
-        source: Number(node.value),
-        target: fakeId,
-        color: 'white',
-      });
-    }
-
-    // Add a fake node if necessary to the left so that the tree has the proper binary tree shape.
-    if (node.right && !node.left) {
-      const fakeId = node.value - 0.5;
-      nodes.push({ id: fakeId, color: 'white', size: 0 });
-      edges.push({
-        id: `${node.value}_fake_edge_left`,
-        source: Number(node.value),
-        target: fakeId,
-        color: 'white',
-      });
-    }
   }
 
-  return { nodes, edges };
+  return {
+    nodes: nodes,
+    edges: edges,
+  };
 }
