@@ -23,6 +23,18 @@ Tree.prototype.insert = function (value) {
   return new Tree(this.value, this.parent, left, right);
 };
 
+Tree.prototype.find = function (value) {
+  if (this.value === value) {
+    return this;
+  }
+
+  if (value < this.value) {
+    return this.left ? this.left.find(value) : null;
+  }
+
+  return this.right ? this.right.find(value) : null;
+}
+
 Tree.prototype[Symbol.iterator] = function* () {
   if (this.left) {
     yield* this.left[Symbol.iterator]();
