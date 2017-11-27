@@ -11,11 +11,11 @@ const styles = {
   },
 };
 
-export default function Menu() {
+export default function Menu({ canRotateLeft, canRotateRight }) {
   return (
     <ul style={styles.container}>
-      <MenuItem label="Rotate left" />
-      <MenuItem label="Rotate right" />
+      <MenuItem disabled={!canRotateLeft} label="Rotate left" />
+      <MenuItem disabled={!canRotateRight} label="Rotate right" />
     </ul>
   );
 }

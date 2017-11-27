@@ -1,7 +1,7 @@
 import React from 'react';
 import Controls from '../containers/controls';
 import Graph from '../containers/graph';
-import Menu from './menu';
+import Menu from '../containers/menu';
 
 const styles = {
   container: {
