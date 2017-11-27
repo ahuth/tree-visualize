@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuItem from './menu-item';
 
 const styles = {
   container: {
@@ -8,17 +9,13 @@ const styles = {
     margin: 0,
     padding: 0,
   },
-  item: {
-    cursor: 'pointer',
-    padding: '0.4rem',
-  },
 };
 
 export default function Menu() {
   return (
     <ul style={styles.container}>
-      <li style={styles.item}>Rotate left</li>
-      <li style={styles.item}>Rotate right</li>
+      <MenuItem label="Rotate left" />
+      <MenuItem label="Rotate right" />
     </ul>
   );
 }
